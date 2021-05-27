@@ -2,7 +2,6 @@ package userregistrationjunit;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 public class UserRegisterTest 
 {
 	public static boolean usernameValidation(String name) 
@@ -16,5 +15,4 @@ public class UserRegisterTest
 		 Matcher m = p.matcher(name);
 		 return m.matches();	 
 	}
-
 }

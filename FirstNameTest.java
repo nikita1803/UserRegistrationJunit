@@ -4,13 +4,12 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class FirstNameTest {
-
+public class FirstNameTest 
+{
 	@Test
 	public void test() {
 		UserRegisterTest FirstName = new UserRegisterTest();
-		boolean result = FirstName.usernameValidation("Nikita");
+		boolean result = FirstName.usernameValidation("Nikki");
 		assertEquals(true,result);
 	}
-
 }
