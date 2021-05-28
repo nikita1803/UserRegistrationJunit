@@ -30,4 +30,10 @@ public class FirstNameTest
 		boolean result = mobileNum.mobileNumValidation("91 9523546770");
 		assertEquals(true,result);
 	}
+	@Test
+	public void passwordValidation() {
+		UserRegisterTest password = new UserRegisterTest();
+		boolean result = password.passwordValidation("12345678");
+		assertEquals(true,result);
+	}
 }

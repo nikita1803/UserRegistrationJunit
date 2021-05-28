@@ -54,4 +54,21 @@ public class UserRegisterTest
 		Matcher m = p.matcher(mobileNum);
 		return m.matches();
 	}
+	/**
+	 * passwordValidation is a function to check password validation
+	 * @param password
+	 * @return boolean value 
+	 * password validation part 1 is enter minimum 8 characters
+	 */
+	public static boolean passwordValidation(String password) 
+	{
+		String regex = "^[a-z A-z]{8,}$";
+		Pattern p = Pattern.compile(regex);
+		if ( password == null )
+		{
+			return false;
+		}
+		Matcher m = p.matcher(password);
+		return m.matches();
+	}
 }
