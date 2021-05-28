@@ -24,4 +24,10 @@ public class FirstNameTest
 		boolean result = email.email("abc.xyz@bridgelabz.co.in");
 		assertEquals(true,result);
 	}
+	@Test
+	public void mobileNumValidation() {
+		UserRegisterTest mobileNum = new UserRegisterTest();
+		boolean result = mobileNum.mobileNumValidation("91 9523546770");
+		assertEquals(true,result);
+	}
 }
