@@ -89,4 +89,16 @@ public class UserRegisterTest
 		 Matcher m = p.matcher(email);
 		return m.matches();
 	}
+	/**
+	 * Analyse happy sad is a function which is use to test if happy then sucessfull else fail.
+	 * @param message
+	 * @return boolean vale 
+	 * if message contain sad then return false if happy then return true
+	 */
+	public boolean analyseHappySad(String message) 
+	{
+		if(message.contains("Sad"))
+            return false;
+		return true;
+	}
 }

@@ -174,4 +174,18 @@ public class FirstNameTest
 		boolean result = email.emailValidate("abc@gmail.com.aa.au");
 		assertEquals(true,result);
 	}
+	@Test
+    public void givenSadMessageReturnSad()
+    {
+		UserRegisterTest Analyser = new UserRegisterTest();
+        boolean mood = Analyser.analyseHappySad("Hello i am Sad");
+        assertEquals(true,mood);
+    }
+	@Test
+    public void givenHappyMessageReturnHappy()
+    {
+		UserRegisterTest Analyser = new UserRegisterTest();
+        boolean mood = Analyser.analyseHappySad("Hello i am happy");
+        assertEquals(true,mood);
+    }
 }
