@@ -33,7 +33,7 @@ public class FirstNameTest
 	@Test
 	public void passwordValidation() {
 		UserRegisterTest password = new UserRegisterTest();
-		boolean result = password.passwordValidation("12345678");
+		boolean result = password.passwordValidation("Nikitarai");
 		assertEquals(true,result);
 	}
 }
