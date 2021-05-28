@@ -74,4 +74,19 @@ public class UserRegisterTest
 		Matcher m = p.matcher(password);
 		return m.matches();
 	}
+	/**
+	 * Email validation is function to check the sample emails which is predefine
+	 */
+	public static boolean emailValidate(String email)
+	{
+		
+		String regex = "^[0-9A-Za-z]+(([._+-]{0,1})[0-9A-Za-z]+)*@[0-9A-Za-z]+.[a-z]{2,4}.([a-z]{2,3})*$";
+		Pattern p = Pattern.compile(regex);
+		if (email == null) 
+		{
+			return false;
+		}
+		 Matcher m = p.matcher(email);
+		return m.matches();
+	}
 }
