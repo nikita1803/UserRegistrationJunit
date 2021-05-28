@@ -19,5 +19,22 @@ public class UserRegisterTest
 		 Matcher m = p.matcher(name);
 		 return m.matches();	 
 	}
+	/**
+	 * email is a function checks the email validity
+	 * there are 3 mandatory  field abc , bridglabz , co
+	 * two optional field   
+	 */
+	public static boolean email(String email)
+	{
+		
+		String regex = "^[abc](.+)[A-Za-z+_.-]+@[bridgelabz](.+)[co](.+)[A-Za-z]$";
+		Pattern p = Pattern.compile(regex);
+		if (email == null) 
+		{
+			return false;
+		}
+		 Matcher m = p.matcher(email);
+		return m.matches();
+	}
 	
 }
