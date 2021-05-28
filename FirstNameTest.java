@@ -2,8 +2,15 @@ package userregistrationjunit;
 
 import static org.junit.Assert.*;
 
-import org.junit.Test;
+import java.util.Arrays;
+import java.util.Collection;
 
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+@RunWith(Parameterized.class)
 public class FirstNameTest 
 {
 	@Test
@@ -188,4 +195,23 @@ public class FirstNameTest
         boolean mood = Analyser.analyseHappySad("Hello i am happy");
         assertEquals(true,mood);
     }
+	 private String emailId;
+     private String expectedResult;
+     public FirstNameTest(String emailId,String expectedResult)
+     {
+    	 super();
+    	 this.emailId=emailId;
+    	 this.expectedResult=expectedResult;
+     }
+     @Parameterized.Parameters
+     public static Collection input ()
+     {
+         return Arrays.asList( new Object[][] { { "abc@xyz.com", "abc"} });
+     }
+     @Test
+     public void emailCheck()
+     {
+    	 UserRegisterTest email= new UserRegisterTest();
+         Assert.assertEquals(expectedResult, email.emailcheck(emailId) );
+     }
 }

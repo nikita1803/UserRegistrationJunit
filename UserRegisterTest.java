@@ -1,9 +1,15 @@
 package userregistrationjunit;
 
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized.Parameters;
+
 public class UserRegisterTest 
 {
+	
 	/**
 	 * Test case to validate the first name and last name.
 	 * @return boolean value
@@ -101,4 +107,16 @@ public class UserRegisterTest
             return false;
 		return true;
 	}
+	/**
+	 * email check is a function use to check the email validation with parameter"
+	 * @param emailId
+	 * @return string value
+	 */
+	public String emailcheck(String emailId)
+    {
+		return emailId;
+        
+    }
+	
+	  
 }
